@@ -1,0 +1,22 @@
+
+@@ -0,0 +1,20 @@
+FUNCTION Insertion-Sort (tab:ARRAY OF INTEGER , n:INTEGER):INTEGER 
+VAR 
+i,j,temp :INTEGER 
+n := tab.length
+
+BEGIN
+ FOR i FROM 1 TO n STEP 1 DO 
+ temp := tab[i]
+ j := i-1
+ END FOR 
+
+ WHILE (j>=0 AND temp <= tab[j]) DO 
+ IF (tab[j+1] = tab[j]) THEN
+ j := j-1
+ END IF 
+
+ tab[j+1] := temp 
+
+ END WHILE 
+ END 
